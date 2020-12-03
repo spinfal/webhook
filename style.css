@@ -1,0 +1,63 @@
+.main {
+  opacity: 0;
+}
+
+#store {
+  background: lightslategray;
+  border-radius: 3px;
+  width: 210px;
+}
+
+#url, #name, #avatar, #content, #emauth, #emtitle, #emdesc, #emhex {
+  width: 225px;
+  height: 20px;
+  border-radius: 5px;
+  border-color: purple;
+  background: lightblue;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+/* this will enable the animation */
+#name, #avatar, #tip, #emauth, #emtitle, #emdesc, #emhex {
+  transition: all 0.8s;
+  opacity: 1;
+}
+/* hide css */
+#name.hide, #avatar.hide, #tip.hide, #emauth.hide, #emtitle.hide, #emdesc.hide, #emhex.hide {
+  opacity: 0;
+  height: 0; /* optional */
+  visibility: hidden;
+}
+
+#url:hover, #name:hover, #avatar:hover, #content:hover, #emauth:hover, #emtitle:hover, #emdesc:hover, #emhex:hover {
+  width: 235px;
+  transition: 0.2s;
+}
+
+#url:focus, #name:focus, #avatar:focus, #content:focus, #emauth:focus, #emtitle:focus, #emdesc:focus, #emhex:focus {
+  width: 260px;
+  transition: 0.2s;
+}
+
+#url:not(:focus), #name:not(:focus), #avatar:not(:focus), #content:not(:focus), #emauth:not(:focus), #emtitle:not(:focus), #emdesc:not(:focus), #emhex:not(:focus) {
+  transition: 0.2s;
+}
+
+button {
+  width: 90px;
+  height: 40px;
+  border-radius: 5px;
+  border-color: purple;
+  background: lightblue;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+#extra {
+  margin-top: 0px;
+}
+
+/* url, name, avatar, content */
