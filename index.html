@@ -25,7 +25,8 @@ embed vars used: emauth, emtitle, emdesc, emhex
     <input type="text" class="inpClass" id="emdesc" placeholder="embed description (optional)"><br>
     <input type="url" class="inpClass" id="emhex" placeholder="embed hex (optional)"><br>
     <button onclick="sendMessage()">send</button><br>
-    <button onclick="extra()" id="extra">toggle extra options</button><br>
+    <button onclick="extra()" id="extra">toggle extra options</button>
+    <a href="/modify.html" draggable="false" style="text-decoration: none;"><button id="modify" style="display: inline;">modify webhook</button></a><br>
     <div id="store">
     &nbsp;&nbsp;<button onclick="save()" id="save">save webhook url</button>
     <button onclick="remove()" id="remove" style="display: inline;">remove saved url</button>
@@ -33,5 +34,10 @@ embed vars used: emauth, emtitle, emdesc, emhex
     <p id="error"></p>
   </div>
     <script src="script.js"></script>
+    <script>
+      if (location.protocol !== 'https:') {
+        location.replace(`https:${location.href.substring(location.protocol.length)}`);
+      }
+    </script>
   </body>
 </html>

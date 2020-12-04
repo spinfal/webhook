@@ -7,10 +7,6 @@ var webbed;
 var params;
 document.getElementById('remove').disabled = true;
 
-// force https
-/*if (window.location.href!=='https://hookgobrr.spinfal.repl.co/') {
-  window.open('https://hookgobrr.spinfal.repl.co', '_self');
-}*/
 if (localStorage.getItem('webhook')!=="") {
   document.getElementById('remove').disabled = false;
 }
@@ -68,16 +64,16 @@ if (localStorage.getItem('webhook')!=="") {
     } // end of sendMessage()
 
     function updateHook() {
-      var hookurl = document.getElementById('token').value; var channel = document.getElementById('channel').value;
+      var hooktoken = document.getElementById('token').value; var channel = document.getElementById('channel').value;
 
       var update = new XMLHttpRequest();
-      update.open("PATCH", hookurl);
+      update.open("PATCH", hooktoken);
 
       var upparams = {
         // update params go here, coming soon(tm)
       }
 
-      update.send(JSON.stringify(params));
+      update.send(JSON.stringify(upparams));
     }
 
 // show and hide extra fields

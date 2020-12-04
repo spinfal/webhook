@@ -15,5 +15,10 @@
     <input type="text" class="inpClass" id="channel" placeholder="new channel id"><br>
     <button id="update" onclick="updateHook()">update webhook</button>
     <script src="script.js"></script>
+    <script>
+      if (location.protocol !== 'https:') {
+        location.replace(`https:${location.href.substring(location.protocol.length)}`);
+      }
+    </script>
   </body>
 </html>
