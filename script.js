@@ -63,19 +63,6 @@ if (localStorage.getItem('webhook')!=="") {
       document.getElementById('send').disabled = true; setTimeout(() => {  document.getElementById('send').disabled = false; }, 700);
     } // end of sendMessage()
 
-    function updateHook() {
-      var hooktoken = document.getElementById('token').value; var channel = document.getElementById('channel').value;
-
-      var update = new XMLHttpRequest();
-      update.open("PATCH", hooktoken);
-
-      var upparams = {
-        // update params go here, coming soon(tm)
-      }
-
-      update.send(JSON.stringify(upparams));
-    }
-
 // show and hide extra fields
     function extra() {
       document.getElementById("name").classList.toggle("hide"); document.getElementById("avatar").classList.toggle("hide"); document.getElementById("emauth").classList.toggle("hide"); document.getElementById("emtitle").classList.toggle("hide"); document.getElementById("emdesc").classList.toggle("hide"); document.getElementById("tip").classList.toggle("hide"); document.getElementById("emhex").classList.toggle("hide"); document.getElementById("name").value = ""; document.getElementById("avatar").value = ""; document.getElementById("emauth").value = ""; document.getElementById("emtitle").value = ""; document.getElementById("emdesc").value = ""; document.getElementById("emhex").value = ""; document.getElementById('extra').disabled = true;  setTimeout(() => {  document.getElementById('extra').disabled = false; }, 800);
@@ -91,8 +78,4 @@ if (localStorage.getItem('webhook')!=="") {
       if (localStorage.getItem('webhook')!=="") {
         localStorage.setItem('webhook', ''); alert('saved webhook removed'); document.getElementById('remove').disabled = true;
       }
-    }
-    
-    function tip() {
-      alert('https://discord.com/api/webhooks/000000000000000000/charactersHereIsTheToken');
     }
