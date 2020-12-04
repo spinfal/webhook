@@ -12,7 +12,7 @@ body {
   width: 210px;
 }
 
-#url, #name, #avatar, #content, #emauth, #emtitle, #emdesc, #emhex, #token, #channel {
+.inpClass {
   width: 225px;
   height: 20px;
   border-radius: 5px;
@@ -34,17 +34,17 @@ body {
   visibility: hidden;
 }
 
-#url:hover, #name:hover, #avatar:hover, #content:hover, #emauth:hover, #emtitle:hover, #emdesc:hover, #emhex:hover, #token:hover, #channel:hover {
+.inpClass:hover {
   width: 235px;
   transition: 0.2s;
 }
 
-#url:focus, #name:focus, #avatar:focus, #content:focus, #emauth:focus, #emtitle:focus, #emdesc:focus, #emhex:focus, #token:focus, #channel:focus {
+.inpClass:focus {
   width: 260px;
   transition: 0.2s;
 }
 
-#url:not(:focus), #name:not(:focus), #avatar:not(:focus), #content:not(:focus), #emauth:not(:focus), #emtitle:not(:focus), #emdesc:not(:focus), #emhex:not(:focus), #token:not(:focus), #channel:not(:focus) {
+inpClass:not(:focus) {
   transition: 0.2s;
 }
 

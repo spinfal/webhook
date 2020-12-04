@@ -71,7 +71,7 @@ if (localStorage.getItem('webhook')!=="") {
       var hookurl = document.getElementById('token').value; var channel = document.getElementById('channel').value;
 
       var update = new XMLHttpRequest();
-      update.open("POST", hookurl);
+      update.open("PATCH", hookurl);
 
       var upparams = {
         // update params go here, coming soon(tm)
