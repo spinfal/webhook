@@ -5,13 +5,14 @@ embed vars used: emauth, emtitle, emdesc, emhex
 
 var webbed;
 var params;
+document.getElementById('remove').disabled = true;
 
 // force https
-if (window.location.href!=='https://hookgobrr.spinfal.repl.co/') {
+/*if (window.location.href!=='https://hookgobrr.spinfal.repl.co/') {
   window.open('https://hookgobrr.spinfal.repl.co', '_self');
-}
-if (localStorage.getItem('webhook')==="") {
-  document.getElementById('remove').disabled = true;
+}*/
+if (localStorage.getItem('webhook')!=="") {
+  document.getElementById('remove').disabled = false;
 }
 
 // hide fields by default
@@ -64,6 +65,19 @@ if (localStorage.getItem('webhook')==="") {
         return parseInt(hex.replace("#",""), 16);
       }
       document.getElementById('send').disabled = true; setTimeout(() => {  document.getElementById('send').disabled = false; }, 700);
+    } // end of sendMessage()
+
+    function updateHook() {
+      var hookurl = document.getElementById('token').value; var channel = document.getElementById('channel').value;
+
+      var update = new XMLHttpRequest();
+      update.open("POST", hookurl);
+
+      var upparams = {
+        // update params go here, coming soon(tm)
+      }
+
+      update.send(JSON.stringify(params));
     }
 
 // show and hide extra fields
@@ -81,4 +95,8 @@ if (localStorage.getItem('webhook')==="") {
       if (localStorage.getItem('webhook')!=="") {
         localStorage.setItem('webhook', ''); alert('saved webhook removed'); document.getElementById('remove').disabled = true;
       }
+    }
+    
+    function tip() {
+      alert('https://discord.com/api/webhooks/000000000000000000/charactersHereIsTheToken');
     }
