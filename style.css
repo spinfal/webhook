@@ -44,7 +44,7 @@ body {
   transition: 0.2s;
 }
 
-inpClass:not(:focus) {
+.inpClass:not(:focus), .inpClass:not(:hover) {
   transition: 0.2s;
 }
 
