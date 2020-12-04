@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="a simple way to send messages via a webhook, its pretty basic">
     <link rel="stylesheet" href="style.css">
+    <link rel="favicon" href="https://img.icons8.com/color/2x/webhook.png">
     <title>update a webhook lol</title>
   </head>
   <body style="font-family: Verdana">
@@ -14,6 +15,7 @@
     <input type="password" class="inpClass" id="token" placeholder="webhook token"><br>
     <input type="text" class="inpClass" id="channel" placeholder="new channel id"><br>
     <button id="update" onclick="updateHook()">update webhook</button>
+    <button onclick="window.open('/', '_self')" style="display: inline;">go back home</button>
     <script src="script.js"></script>
     <script>
       if (location.protocol !== 'https:') {

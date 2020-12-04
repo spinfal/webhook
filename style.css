@@ -23,12 +23,12 @@ body {
 }
 
 /* this will enable the animation */
-#name, #avatar, #tip, #emauth, #emtitle, #emdesc, #emhex {
+.inpClass {
   transition: all 0.8s;
   opacity: 1;
 }
 /* hide css */
-#name.hide, #avatar.hide, #tip.hide, #emauth.hide, #emtitle.hide, #emdesc.hide, #emhex.hide {
+.inpClass.hide {
   opacity: 0;
   height: 0; /* optional */
   visibility: hidden;
